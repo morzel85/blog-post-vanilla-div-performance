@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla div performance (morzel.net blog post code sample)</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div id="controlPanel">
+          <div>
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" min="1" max="10000000" />
+            <span id="warning">Are you sure?</span>
+          </div>
+          <div>
+            <button id="makeCreateElementInline">Make: createElement (inline) + appendChild</button>
+            <button id="makeCreateElement">Make: createElement + appendChild</button>
+            <button id="makeInnerHTML">Make: string + innerHTML</button>
+            <button id="makeCreateDocumentFragment">Make: createDocumentFragment + appendChild</button>
+            <button id="clear" disabled>Clear</button>
+          </div>
+        </div>
+        <div id="container"></div>
+        <div id="info">
+          Example app from <a href="http://morzel.net" target="_blank" rel="noreferrer">morzel.net</a>
+          <a href="https://en.morzel.net/post/vanilla-div-performance" target="_blank" rel="noreferrer">blog post</a>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
